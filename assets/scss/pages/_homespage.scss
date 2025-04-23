@@ -77,6 +77,11 @@
 
 #compétence-secondary {
     margin-bottom: 5%;
+    .secondary-compétence-heading {
+        text-align: center;
+        margin-top: 4.5%;
+        margin-bottom: 2.5%;
+    }
     .card-container-secondary {
       position: relative;
       overflow: hidden;
@@ -90,7 +95,7 @@
         margin-top: 10%;
       position: absolute;
       top: 0;
-      height: 700px;
+      height: 550px;
       transition: all 0.4s ease-in-out;
       .card-content-secondary {
         padding-top: 25%;
@@ -134,7 +139,7 @@
 #slide-range {
     position: absolute;
     left: 50%;
-    bottom: 2.5%;
+    bottom: 15%;
     transform: translate(-50%, -50%);
     display: block;
     width: 80%;

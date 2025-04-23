@@ -5,20 +5,49 @@
 header {
     // menu de nav
     nav {
+        position: fixed;
+        background-color: var.$couleur-secondaire;
+        width: 100%;
+        z-index: 10;
         display: flex;
         align-items: center;
-        margin-top: 0.5%;
+        transition: all 0.3s ease;
         .logo-container {
             width: 15%;
             margin-left: 5%;
             .logo {
              width: 100%;
+             transition: opacity 0.3s ease;
             }
         }
+        &.scrolled {
+            padding: 0.2rem 0;
+            height: 5%;
+            margin-top: 0.5%;
+            backdrop-filter: blur(8px);
+            background-color: #22333bdb;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        
+            .logo {
+                width: 80%;
+            }
+        
+            .menu-items-container {
+              gap: 15%;
+              margin-left: 15%;
+        
+              .menu-item {
+                font-size: 1.5rem;
+              }
+            }
+          }
         .menu-items-container {
             display: flex;
             gap: 25%;
             margin-left: 25%;
+            .menu-item {
+                color: var.$couleur-principale;
+            }
         }
     }
     // ajout de la bannière et de son texte 
@@ -26,7 +55,7 @@ header {
         background-image: url(../img/banner.jpg);
         background-position: center;
         background-size: cover;
-        height: 91vh;
+        height: 100vh;
         .banner-content {
             display: flex;
             flex-direction: column;

@@ -8,15 +8,15 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
+    <header id="accueil">
         <nav>
             <div class="logo-container">
-                <a href="#"><img src="assets/img/Logo 1.png" alt="Logo Giraud Sasha" class="logo"></a>
+                <a href="#accueil"><img src="assets/img/logo-white.png" alt="Logo Giraud Sasha" class="logo"></a>
             </div>
             <ul class="menu-items-container">
-                <li><a href="" class="menu-item">Accueil</a></li>
-                <li><a href="" class="menu-item">Compétence</a></li>
-                <li><a href="" class="menu-item">Réalisations</a></li>
+                <li><a href="#accueil" class="menu-item">Accueil</a></li>
+                <li><a href="#compétence" class="menu-item">Compétence</a></li>
+                <li><a href="#realisations" class="menu-item">Réalisations</a></li>
                 <li><a href="" class="menu-item">Contact</a></li>
             </ul>
         </nav>
@@ -98,8 +98,42 @@
             <input type="range" id="slide-range" min="0" max="2" value="0" aria-label="Sélecteur de slide">
         </div>
         </section>
+        <section id="realisations">
+            <div class="real-heading">
+                <h2>Mes réalisations</h2>
+            </div>
+            <div class="grid-portfolio">
+                <div class="card">
+                  <div class="card-content">
+                    <h3>Baldur’s Gate III</h3>
+                    <p>Réalisation d’un projet sur le thème de Baldur’s Gate III.</p>
+                    <span>Utilisation de HTML/CSS</span>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <h3>Pep’s Coaching</h3>
+                    <p>Réalisation d’un projet sur le site web de “Pep’s Coaching”.</p>
+                    <span>Utilisation HTML/CSS</span>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <h3>OneMillionsLines</h3>
+                    <p>Réalisation d’un projet sur le challenge OneMillionsLines.</p>
+                    <span>Utilisation de Tailwind</span>
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-content">
+                    <h3>Ohm Sweet Ohm</h3>
+                    <p>Projet collaboratif pour une plateforme de bien-être mental.</p>
+                    <span>Utilisation de HTML/SCSS</span>
+                  </div>
+                </div>
+            </div>
+        </section>
     </main>
-
     <script src="script.js"></script>
 </body>
 </html>

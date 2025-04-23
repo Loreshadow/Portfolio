@@ -40,9 +40,13 @@ a {
 }
 
 header nav {
+  position: fixed;
+  background-color: #22333B;
+  width: 100%;
+  z-index: 10;
   display: flex;
   align-items: center;
-  margin-top: 0.5%;
+  transition: all 0.3s ease;
 }
 header nav .logo-container {
   width: 15%;
@@ -50,17 +54,39 @@ header nav .logo-container {
 }
 header nav .logo-container .logo {
   width: 100%;
+  transition: opacity 0.3s ease;
+}
+header nav.scrolled {
+  padding: 0.2rem 0;
+  height: 5%;
+  margin-top: 0.5%;
+  backdrop-filter: blur(8px);
+  background-color: rgba(34, 51, 59, 0.8588235294);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+header nav.scrolled .logo {
+  width: 80%;
+}
+header nav.scrolled .menu-items-container {
+  gap: 15%;
+  margin-left: 15%;
+}
+header nav.scrolled .menu-items-container .menu-item {
+  font-size: 1.5rem;
 }
 header nav .menu-items-container {
   display: flex;
   gap: 25%;
   margin-left: 25%;
 }
+header nav .menu-items-container .menu-item {
+  color: #F2F4F3;
+}
 header .banner {
   background-image: url(../img/banner.jpg);
   background-position: center;
   background-size: cover;
-  height: 91vh;
+  height: 100vh;
 }
 header .banner .banner-content {
   display: flex;
@@ -153,6 +179,11 @@ header .banner .banner-content .banner-title {
 #compétence-secondary {
   margin-bottom: 5%;
 }
+#compétence-secondary .secondary-compétence-heading {
+  text-align: center;
+  margin-top: 4.5%;
+  margin-bottom: 2.5%;
+}
 #compétence-secondary .card-container-secondary {
   position: relative;
   overflow: hidden;
@@ -165,7 +196,7 @@ header .banner .banner-content .banner-title {
   margin-top: 10%;
   position: absolute;
   top: 0;
-  height: 700px;
+  height: 550px;
   transition: all 0.4s ease-in-out;
 }
 #compétence-secondary .card-secondary .card-content-secondary {
@@ -205,7 +236,7 @@ header .banner .banner-content .banner-title {
 #slide-range {
   position: absolute;
   left: 50%;
-  bottom: 2.5%;
+  bottom: 15%;
   transform: translate(-50%, -50%);
   display: block;
   width: 80%;

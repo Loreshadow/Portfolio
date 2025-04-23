@@ -1,3 +1,17 @@
+// Menu de nav Desktop 
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.querySelector('nav');
+  const logo = document.querySelector('.logo');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 850) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
+});
+
 // Carroussel
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('#compétence-secondary .card-container-secondary');
