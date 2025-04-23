@@ -1,0 +1,11 @@
+@use "../abstract/variables";
+
+@font-face {
+    font-family: variables.$police-principale;
+    src: url(../fonts/Open_Sans/static/OpenSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: variables.$police-secondaire;
+    src: url(../fonts/Dancing_Script/static/DancingScript-Regular.ttf);
+}
