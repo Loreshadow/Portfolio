@@ -1,11 +1,11 @@
-@use "../abstract/variables";
+@use "../abstract/variables" as var;
 
 @font-face {
-    font-family: variables.$police-principale;
+    font-family: var.$police-principale;
     src: url(../fonts/Lato/Lato-Regular.ttf);
 }
 
 @font-face {
-    font-family: variables.$police-secondaire;
+    font-family: var.$police-secondaire;
     src: url(../fonts/Playfair_Display/static/PlayfairDisplay-Regular.ttf);
 }
