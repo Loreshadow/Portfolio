@@ -14,11 +14,20 @@
                 <a href="#accueil"><img src="assets/img/logo-white.png" alt="Logo Giraud Sasha" class="logo"></a>
             </div>
             <ul class="menu-items-container">
-                <li><a href="#accueil" class="menu-item">Accueil</a></li>
-                <li><a href="#compétence" class="menu-item">Compétence</a></li>
-                <li><a href="#realisations" class="menu-item">Réalisations</a></li>
-                <li><a href="" class="menu-item">Contact</a></li>
+                <li><a href="#accueil" class="menu-item" data-i18n="nav_home"></a></li>
+                <li><a href="#compétence" class="menu-item" data-i18n="nav_competence"></a></li>
+                <li><a href="#realisations" class="menu-item" data-i18n="nav_project"></a></li>
+                <li><a href="" class="menu-item" data-i18n="nav_contact"></a></li>
             </ul>
+            <div class="lang-switcher">
+                <button class="lang-toggle">Français ⌄</button>
+                <ul class="lang-options">
+                  <li data-lang="fr">Français</li>
+                  <li data-lang="en">English</li>
+                </ul>
+            </div>
+              <!-- <h1 data-i18n="home_title"></h1>
+              <p data-i18n="home_intro"></p> -->
         </nav>
         <div class="banner">
             <div class="banner-content">
@@ -30,8 +39,8 @@
     </header>
     <main>
         <section id="compétence">
-            <div class="compétence-heading">
-                <h2>Compétences principales</h2>
+            <div class="competence-heading">
+                <h2 data-i18n="competence_heading">Compétences principales</h2>
             </div>
             <div class="cards-container">
                 <div class="card">
@@ -39,8 +48,8 @@
                         <img src="assets/img/html5.png" alt="">
                     </div>
                     <div class="card-content">
-                        <p>Utilisation de HTML :</p>
-                        <p>Sans la base on ne peut rien faire</p>
+                        <p data-i18n="competence_content_card1"></p>
+                        <p data-i18n="competence_content2_card1"></p>
                     </div>
                 </div>
                 <div class="card">
@@ -48,8 +57,8 @@
                         <img src="assets/img/css3.png" alt="">
                     </div>
                     <div class="card-content">
-                        <p>Utilisation de CSS3 :</p>
-                        <p>Un site sans un peu de style n’est pas un site réussi .</p>
+                        <p data-i18n="competence_content_card2"></p>
+                        <p data-i18n="competence_content2_card2"></p>
                     </div>
                 </div>
                 <div class="card">
@@ -57,15 +66,15 @@
                         <img src="assets/img/JavaScript.png" alt="">
                     </div>
                     <div class="card-content">
-                        <p>Utilisation de JavaScript :</p>
-                        <p>Sans fonctionalité “Avancée” c’est toujours moins bien.</p>
+                        <p data-i18n="competence_content_card3"></p></p>
+                        <p data-i18n="competence_content2_card3"></p></p>
                     </div>
                 </div>
             </div>
         </section>
         <section id="compétence-secondary">
         <div class="secondary-compétence-heading">
-                <h2>Mes compétence secondaire</h2>
+                <h2 data-i18n="competence_sec_heading">Mes compétence secondaire</h2>
         </div>
         <div class="card-container-secondary">
             <div class="card-secondary">
@@ -92,7 +101,7 @@
                 </div>
                 <div class="card-content-secondary">
                     <p>Utilisation de Figma :</p>
-                    <p>Utilisation de tailwind pour le travail en équipe sans prise de tête et le gain de temps.</p>
+                    <p>Utilisation de Figma afin de réaliser des maquette.</p>
                 </div>
             </div>
             <input type="range" id="slide-range" min="0" max="2" value="0" aria-label="Sélecteur de slide">
@@ -135,5 +144,6 @@
         </section>
     </main>
     <script src="script.js"></script>
+    <script src="translation.js"></script>
 </body>
 </html>

@@ -3,7 +3,7 @@
 
 // SCSS de la section compétence 
 
-.compétence-heading{
+.competence-heading {
     text-align: center;
     margin-top: 2.5%;
 }
@@ -170,3 +170,51 @@
       cursor: pointer;
     }
 }
+
+// section réalisations 
+.grid-portfolio {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 2rem;
+    padding: 2rem;
+  
+    .card {
+      position: relative;
+      height: 300px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+  
+      &:hover {
+        transform: scale(1.03);
+      }
+  
+      .card-content {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.6);
+        color: white;
+        padding: 1rem;
+        width: 100%;
+        text-align: center;
+  
+        h3 {
+          margin-bottom: 0.5rem;
+          font-size: 1.2rem;
+        }
+  
+        p {
+          font-size: 0.9rem;
+          margin-bottom: 0.3rem;
+        }
+  
+        span {
+          font-size: 0.8rem;
+          color: #ccc;
+        }
+      }
+    }
+  }
