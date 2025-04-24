@@ -55,3 +55,56 @@ document.addEventListener('DOMContentLoaded', () => {
   // Initialisation
   updateSlides(current);
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  const cards = document.querySelectorAll('.grid-portfolio .card');
+  const lightbox = document.getElementById('lightbox');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const closeBtn = document.getElementById('lightbox-close');
+  const prevBtn = document.getElementById('lightbox-prev');
+  const nextBtn = document.getElementById('lightbox-next');
+
+  let currentImages = [];
+  let currentIndex = 0;
+
+  // Exemple : assigner des galeries d’images à chaque carte
+  const galleries = {
+    0: ['assets/img/BG3-project.png', 'assets/img/BG3-project2.png', 'assets/img/BG3-project3.png'],
+    1: ['assets/img/Peps-coaching.png', 'assets/img/Peps-coaching2.png', 'assets/img/Peps-coaching3.png'],
+    2: ['assets/img/One-millions.png', 'assets/img/One-millions2.png'],
+    3: ['assets/img/Ohm-Sweet-Ohm.png', 'assets/img/Ohm-Sweet-Ohm2.png'],
+  };
+
+  cards.forEach((card, index) => {
+    card.addEventListener('click', () => {
+      currentImages = galleries[index] || [];
+      currentIndex = 0;
+      updateLightbox();
+      lightbox.classList.add('visible');
+    });
+  });
+
+  function updateLightbox() {
+    lightboxImg.src = currentImages[currentIndex];
+  }
+
+  closeBtn.addEventListener('click', () => {
+    lightbox.classList.remove('visible');
+  });
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) {
+      lightbox.classList.remove('visible');
+    }
+  });
+
+  prevBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
+    updateLightbox();
+  });
+
+  nextBtn.addEventListener('click', () => {
+    currentIndex = (currentIndex + 1) % currentImages.length;
+    updateLightbox();
+  });
+});
