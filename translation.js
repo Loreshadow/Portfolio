@@ -20,6 +20,31 @@ const translations = {
       competence_content2_card3: "Sans fonctionalité “Avancée” c’est toujours moins bien.",
       // traduction de la section compétence secondaire
       competence_sec_heading: "Mes compétence secondaire",
+        // traduction des cards de compétence secondaire
+        competence_sec_content_card1: "Utilisation de SASS:",
+        competence_sec_content2_card1: "Utilisation de SCSS dans Sass afin de faciliter la maintenabilité du site.",
+        competence_sec_content_card2: "Utilisation de Tailwind:",
+        competence_sec_content2_card2: "Utilisation de tailwind pour le travail en équipe sans prise de tête et le gain de temps.",
+        competence_sec_content_card3: "Utilisation de Figma :",
+        competence_sec_content2_card3: "Utilisation de Figma afin de réaliser des maquette.",
+        // traduction de la section realisation
+        grid_portfolio_heading: "Mes réalisations", 
+        // traduction de la première card
+        grid_portfolio_content_card1: "Baldur’s Gate III",
+        grid_portfolio_content2_card1: "Réalisation d’un projet sur le thème de Baldur’s Gate III.",
+        grid_portfolio_content3_card1: "Utilisation de HTML/CSS",
+        // traduction de la deuxième card
+        grid_portfolio_content_card2: "Pep’s Coaching",
+        grid_portfolio_content2_card2: "Réalisation d’un projet sur le site web de “Pep’s Coaching”.",
+        grid_portfolio_content3_card2: "Utilisation HTML/CSS",
+        // traduction de la troisième card
+        grid_portfolio_content_card3: "OneMillionsLines",
+        grid_portfolio_content2_card3: "Réalisation d’un projet sur le challenge OneMillionsLines.",
+        grid_portfolio_content3_card3: "Utilisation de Tailwind",
+        // traduction de la quatrième card
+        grid_portfolio_content_card4: "Ohm Sweet Ohm",
+        grid_portfolio_content2_card4: "Projet collaboratif pour une plateforme de bien-être mental.",
+        grid_portfolio_content3_card4: "Utilisation de HTML/SCSS",
     },
     en: {
       // translation of the navigation menu elements
@@ -30,8 +55,8 @@ const translations = {
       // Translation of the skills section elements
       // translation of the first card
       competence_heading: "Main Skills",
-      competence_content: "Using HTML5:",
-      competence_content2: "Without the base, we can't do anything",
+      competence_content_card1: "Using HTML5:",
+      competence_content2_card1: "Without the base, we can't do anything",
       // translation of the second card
       competence_content_card2: "Using CSS3:",
       competence_content2_card2: "A site without a bit of style is not a successful site.",
@@ -40,6 +65,34 @@ const translations = {
       competence_content2_card3: "Without 'advanced functionality', it's always less good.",
       // translation of the secondary skills section
       competence_sec_heading: "My Secondary Skills",
+        // translation of the secondary skills cards
+        // card 1
+        competence_sec_content_card1: "Using SASS:",
+        competence_sec_content2_card1: "Using SCSS in Sass to facilitate site maintainability.",
+        // card 2 
+        competence_sec_content_card2: "Using Tailwind:",
+        competence_sec_content2_card2: "Using Tailwind for teamwork without headaches and time saving.",
+        // card 3
+        competence_sec_content_card3: "Using Figma:",
+        competence_sec_content2_card3: "Using Figma to create mockups.",
+        // translation of the realization section
+        grid_portfolio_heading: "My Projects",
+        // translation of the first card
+        grid_portfolio_content_card1: "Baldur’s Gate III",
+        grid_portfolio_content2_card1: "Realization of a project on the theme of Baldur’s Gate III.",
+        grid_portfolio_content3_card1: "Using HTML/CSS",
+        // translation of the second card
+        grid_portfolio_content_card2: "Pep’s Coaching",
+        grid_portfolio_content2_card2: "Realization of a project on the website of “Pep’s Coaching”.",
+        grid_portfolio_content3_card2: "Using HTML/CSS",
+        // translation of the third card
+        grid_portfolio_content_card3: "OneMillionsLines",
+        grid_portfolio_content2_card3: "Realization of a project on the OneMillionsLines challenge.",
+        grid_portfolio_content3_card3: "Using Tailwind",
+        // translation of the fourth card
+        grid_portfolio_content_card4: "Ohm Sweet Ohm",
+        grid_portfolio_content2_card4: "Collaborative project for a mental well-being platform.",
+        grid_portfolio_content3_card4: "Using HTML/SCSS",
     },
   };
   

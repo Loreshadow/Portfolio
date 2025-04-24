@@ -49,8 +49,8 @@ document.addEventListener('DOMContentLoaded', () => {
     slide.addEventListener('click', () => {
       current = index;
       updateSlides(current);
-    });
   });
+});
 
   // Initialisation
   updateSlides(current);

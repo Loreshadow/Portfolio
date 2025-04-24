@@ -311,43 +311,60 @@ header .banner .banner-content .banner-title {
 
 .grid-portfolio {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  grid-gap: 2rem;
+  grid-template-areas: "card1 card2" "card4 card3";
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
   padding: 2rem;
 }
 .grid-portfolio .card {
-  position: relative;
-  height: 300px;
   background-size: cover;
   background-position: center;
-  border-radius: 8px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-.grid-portfolio .card:hover {
-  transform: scale(1.03);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  min-height: 300px;
 }
 .grid-portfolio .card .card-content {
-  position: absolute;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.6);
+  background: #444;
   color: white;
   padding: 1rem;
-  width: 100%;
   text-align: center;
+  width: 100%;
 }
 .grid-portfolio .card .card-content h3 {
+  font-weight: bold;
   margin-bottom: 0.5rem;
-  font-size: 1.2rem;
 }
 .grid-portfolio .card .card-content p {
   font-size: 0.9rem;
-  margin-bottom: 0.3rem;
 }
 .grid-portfolio .card .card-content span {
   font-size: 0.8rem;
   color: #ccc;
+}
+.grid-portfolio .card:nth-child(1) {
+  grid-area: card1;
+}
+.grid-portfolio .card:nth-child(2) {
+  grid-area: card2;
+}
+.grid-portfolio .card:nth-child(3) {
+  grid-area: card3;
+}
+.grid-portfolio .card:nth-child(4) {
+  grid-area: card4;
+}
+@media (max-width: 768px) {
+  .grid-portfolio {
+    grid-template-areas: "card1" "card2" "card3" "card4";
+    grid-template-columns: 1fr;
+  }
+  .grid-portfolio .card {
+    min-height: 250px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
