@@ -74,6 +74,9 @@ header nav.scrolled .menu-items-container {
 header nav.scrolled .menu-items-container .menu-item {
   font-size: 1.5rem;
 }
+header nav .menu-item:hover {
+  color: #C46D5E;
+}
 header nav .menu-items-container {
   display: flex;
   gap: 25%;
@@ -81,6 +84,28 @@ header nav .menu-items-container {
 }
 header nav .menu-items-container .menu-item {
   color: #F2F4F3;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
+}
+header nav .menu-items-container .menu-item:hover {
+  color: #C46D5E;
+}
+header nav .menu-items-container .menu-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 0;
+  background-color: #C46D5E;
+  transition: width 0.3s ease;
+}
+header nav .menu-items-container .menu-item:hover::after {
+  width: 100%;
 }
 header nav .lang-switcher {
   position: relative;
@@ -145,6 +170,135 @@ header .banner .banner-content .banner-title {
   margin-bottom: 3.5%;
 }
 
+.site-footer {
+  background-color: #1e2a31;
+  color: white;
+  padding: 2rem;
+}
+.site-footer .footer-top {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.site-footer .footer-contact {
+  flex: 1;
+  max-width: 500px;
+}
+.site-footer .footer-contact .contact-title {
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+.site-footer .footer-contact .contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+.site-footer .footer-contact .contact-form .textarea {
+  grid-column: 1/-1;
+  resize: none;
+  height: 100px;
+}
+.site-footer .footer-contact .contact-form input,
+.site-footer .footer-contact .contact-form .textarea {
+  padding: 0.5rem;
+  border-radius: 6px;
+  border: none;
+}
+.site-footer .footer-contact button {
+  grid-column: 1/-1;
+  padding: 0.7rem;
+  background-color: #C46D5E;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: ease 0.3s;
+}
+.site-footer .footer-contact button:hover {
+  background-color: rgba(196, 109, 94, 0.7647058824);
+}
+.site-footer .footer-contact .form-message {
+  grid-column: 1/-1;
+  text-align: center;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease;
+}
+.site-footer .footer-contact .form-message {
+  display: none;
+}
+.site-footer .footer-info {
+  min-width: 200px;
+}
+.site-footer .footer-info .info-title,
+.site-footer .footer-info .social-title {
+  font-weight: bold;
+  margin-top: 1rem;
+}
+.site-footer .footer-info .social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+}
+.site-footer .footer-info .social-icons img {
+  width: 50%;
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  border-top: 1px solid #ccc;
+  padding-top: 1rem;
+  text-align: center;
+}
+.footer-bottom nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+.footer-bottom nav a {
+  color: #F2F4F3;
+  position: relative;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
+}
+.footer-bottom nav a:hover {
+  color: #C46D5E;
+}
+.footer-bottom nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 2px;
+  width: 0;
+  background-color: #C46D5E;
+  transition: width 0.3s ease;
+}
+.footer-bottom nav a:hover::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-top .footer-contact {
+    width: 100%;
+  }
+  .footer-top .footer-info {
+    text-align: center;
+  }
+  .footer-top .footer-logo {
+    text-align: center;
+  }
+}
 .competence-heading {
   text-align: center;
   margin-top: 2.5%;
@@ -309,6 +463,12 @@ header .banner .banner-content .banner-title {
   cursor: pointer;
 }
 
+.real-heading {
+  text-align: center;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
+
 .grid-portfolio {
   display: grid;
   grid-template-areas: "card1 card2" "card4 card3";
@@ -334,7 +494,7 @@ header .banner .banner-content .banner-title {
   border: 0.5px solid #C46D5E;
 }
 .grid-portfolio .card .card-content {
-  background: rgba(196, 109, 94, 0.6549019608);
+  background: rgba(196, 109, 94, 0.7960784314);
   color: white;
   padding: 1rem;
   text-align: center;
@@ -348,8 +508,9 @@ header .banner .banner-content .banner-title {
   font-size: 0.9rem;
 }
 .grid-portfolio .card .card-content span {
-  font-size: 0.8rem;
-  color: #ccc;
+  font-size: 1rem;
+  color: #F2F4F3;
+  font-weight: bold;
 }
 .grid-portfolio .card:nth-child(1) {
   grid-area: card1;

@@ -172,6 +172,11 @@
 }
 
 // section réalisations 
+.real-heading {
+  text-align: center;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+}
 .grid-portfolio {
   display: grid;
   grid-template-areas:
@@ -200,7 +205,7 @@
     }
 
     .card-content {
-      background: #c46d5ea7;
+      background: #c46d5ecb;
       color: white;
       padding: 1rem;
       text-align: center;
@@ -216,8 +221,9 @@
       }
 
       span {
-        font-size: 0.8rem;
-        color: #ccc;
+        font-size: 1rem;
+        color: var.$couleur-principale;
+        font-weight: bold;
       }
     }
   }

@@ -41,13 +41,42 @@ header {
               }
             }
           }
+          .menu-item:hover {
+            color: #C46D5E;
+          }
         .menu-items-container {
             display: flex;
             gap: 25%;
             margin-left: 15%;
             .menu-item {
                 color: var.$couleur-principale;
-            }
+                position: relative;
+                text-decoration: none;
+                display: inline-block; // <--- important
+                padding: 0.5rem 0;
+                transition: color 0.3s;
+
+                &:hover {
+                  color: #C46D5E; // couleur d’accent
+                }
+              
+                // Option : soulignement animé au survol
+                &::after {
+                  content: "";
+                  position: absolute;
+                  bottom: 0;
+                  left: 50%;
+                  transform: translateX(-50%);
+                  height: 2px;
+                  width: 0;
+                  background-color: #C46D5E;
+                  transition: width 0.3s ease;
+                }
+              
+                &:hover::after {
+                  width: 100%;
+                }
+              }
         }
         .lang-switcher {
             position: relative;

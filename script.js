@@ -108,3 +108,40 @@ document.addEventListener('DOMContentLoaded', () => {
     updateLightbox();
   });
 });
+
+
+// formulaire de contact : 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const form = document.getElementById('contact-form');
+  const message = document.getElementById('form-message');
+  const submitBtn = document.getElementById('submit-btn');
+
+  submitBtn.addEventListener('click', () => {
+    // verification de la validité
+    if (!form.checkValidity()) {
+      form.reportValidity(); 
+      return; // si non valide on bloque l'envoi
+    }
+
+    const lang = localStorage.getItem('lang') || 'fr';
+    const messageKey = "form_success_message";
+    const messageText = translations[lang][messageKey] || "[message]";
+
+
+    message.textContent = messageText;
+    message.style.color = "#4CAF50";
+    message.style.display = "block";
+
+    form.reset();
+
+    setTimeout(() => {
+      message.style.display = "none";
+    }, 5000);
+  });
+});
+
+document.getElementById('phone').addEventListener('input', (e) => {
+  // Supprime tout caractère non numérique
+  e.target.value = e.target.value.replace(/\D/g, '');
+});

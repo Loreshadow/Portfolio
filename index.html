@@ -143,6 +143,55 @@
             </div>
         </section>
     </main>
+    <footer class="site-footer">
+        <div class="footer-top">
+          <!-- Logo -->
+          <div class="footer-logo">
+            <a href="#accueil"><img src="assets/img/logo-white.png" alt="Logo Giraud Sasha" class="logo"></a>
+          </div>
+      
+          <!-- Formulaire de contact -->
+          <div class="footer-contact">
+            <p class="contact-title">Me contacter :</p>
+            <form id="contact-form" class="contact-form">
+              <input type="text"
+              data-i18n-placeholder="contact_lastname" placeholder="Votre nom" required>
+              <input type="text" data-i18n-placeholder="contact_firstname" placeholder="Votre prénom" required>
+              <input type="email"
+              data-i18n-placeholder="contact_email" placeholder="Votre Email" required>
+              <input type="tel" id="phone" data-i18n-placeholder="contact_phone" placeholder="Votre numéro" required>
+              <input class="textarea" type="text" data-i18n-placeholder="contact_text" placeholder="Écrivez ici ..." required>
+              <button type="button" id="submit-btn">Envoyer</button>
+              <p id="form-message" class="form-message" data-i18n="form_success_message"></p>
+            </form>
+          </div>
+      
+          <!-- Informations & réseaux -->
+          <div class="footer-info">
+            <p class="info-title">Mes informations</p>
+            <p>Mon numéro : xx xx xx xx xx</p>
+            <p>Mon email : email@email.fr</p>
+      
+            <p class="social-title">Mes réseaux :</p>
+            <div class="social-icons">
+              <a href="#"><img src="assets/svg/Instagram.svg" alt="Instagram"></a>
+              <a href="#"><img src="assets/svg/Facebook.svg" alt="Facebook"></a>
+              <a href="#"><img src="assets/svg/X.svg" alt="Twitter / X"></a>
+              <a href="#"><img src="assets/svg/Discord.svg" alt="Discord"></a>
+            </div>
+          </div>
+        </div>
+      
+        <!-- Navigation bas -->
+        <div class="footer-bottom">
+          <nav>
+            <a href="#accueil">Accueil</a>
+            <a href="#compétence">Compétence</a>
+            <a href="#realisations">Réalisations</a>
+            <a href="#contact">Contact</a>
+          </nav>
+        </div>
+      </footer>
     <div class="lightbox" id="lightbox">
         <span id="lightbox-close" class="lightbox-close">&times;</span>
 

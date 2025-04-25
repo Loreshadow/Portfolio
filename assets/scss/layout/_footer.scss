@@ -1,0 +1,151 @@
+@use "../abstract/variables" as var;
+@use "../base/base";
+
+.site-footer {
+    background-color: #1e2a31;
+    color: white;
+    padding: 2rem;
+  
+    .footer-top {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 2rem;
+      }
+  
+      .footer-contact {
+        flex: 1;
+        max-width: 500px;
+  
+        .contact-title {
+          font-weight: bold;
+          margin-bottom: 1rem;
+        }
+  
+        .contact-form {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 1rem;
+  
+          .textarea {
+            grid-column: 1 / -1;
+            resize: none;
+            height: 100px;
+          }
+  
+          input,
+          .textarea {
+            padding: 0.5rem;
+            border-radius: 6px;
+            border: none;
+          }
+        }
+        button {
+            grid-column: 1 / -1;
+            padding: 0.7rem;
+            background-color: #C46D5E;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: ease 0.3s;
+        
+            &:hover {
+              background-color: #c46d5ec3;
+            }
+          }
+        .form-message {
+            grid-column: 1 / -1;
+            text-align: center;
+            margin-top: 0.5rem;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: opacity 0.3s ease;
+          }
+          .form-message {
+            display: none;
+          }
+      }
+  
+      .footer-info {
+        min-width: 200px;
+        .info-title,
+        .social-title {
+          font-weight: bold;
+          margin-top: 1rem;
+        }
+  
+        .social-icons {
+          display: flex;
+          gap: 1rem;
+          margin-top: 0.5rem;
+  
+          img {
+            width: 50%;
+          }
+        }
+      }
+    }
+  
+    .footer-bottom {
+      margin-top: 2rem;
+      border-top: 1px solid #ccc;
+      padding-top: 1rem;
+      text-align: center;
+  
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+  
+        a {
+            color: var.$couleur-principale;
+            position: relative;
+            text-decoration: none;
+            display: inline-block; // <--- important
+            padding: 0.5rem 0;
+            transition: color 0.3s;
+
+            &:hover {
+              color: #C46D5E; // couleur d’accent
+            }
+          
+            // Option : soulignement animé au survol
+            &::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              transform: translateX(-50%);
+              height: 2px;
+              width: 0;
+              background-color: #C46D5E;
+              transition: width 0.3s ease;
+            }
+          
+            &:hover::after {
+              width: 100%;
+            }
+          }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      .footer-top {
+        flex-direction: column;
+        align-items: center;
+  
+        .footer-contact {
+          width: 100%;
+        }
+  
+        .footer-info {
+          text-align: center;
+        }
+  
+        .footer-logo {
+          text-align: center;
+        }
+      }
+    }
