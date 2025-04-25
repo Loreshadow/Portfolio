@@ -1,3 +1,5 @@
+
+
 // Traductions des textes
 const translations = {
   fr: {
@@ -6,6 +8,8 @@ const translations = {
     nav_competence: "Compétences",
     nav_project: "Réalisations",
     nav_contact: "Contact",
+
+    banner_text: "Développeur web & Web Mobile",
 
     // Section compétence principale
     competence_heading: "Compétences principales",
@@ -43,12 +47,27 @@ const translations = {
     grid_portfolio_content2_card4: "Projet collaboratif pour une plateforme de bien-être mental.",
     grid_portfolio_content3_card4: "Utilisation de HTML/SCSS",
 
+    
+    contact_heading: "Contactez-moi",
     contact_lastname: "Votre nom",
     contact_firstname: "Votre prénom",
     contact_email: "Votre email",
     contact_phone: "Votre numéro",
     contact_text: "Écrivez ici ...",
+    form_submit: "Envoyer",
     form_success_message: "Message envoyé avec succès ✅",
+
+
+    info_heading: "Informations",
+    info_phone: "Mon numéro : 06 68 51 91 77",
+    info_mail: "Mon email : giraudsasha@gmail.com ",
+    socials_heading: "Mes réseaux :",
+
+        // Menu navigation footer
+        nav_footer_home: "Accueil",
+        nav_footer_competence: "Compétences",
+        nav_footer_project: "Réalisations",
+        nav_footer_contact: "Contact",
   },
   en: {
     nav_home: "Home",
@@ -56,6 +75,7 @@ const translations = {
     nav_project: "Projects",
     nav_contact: "Contact",
 
+    banner_text: "Web & Mobile Web Developer",
     competence_heading: "Main Skills",
     competence_content_card1: "Using HTML5:",
     competence_content2_card1: "Without the base, we can't do anything",
@@ -89,12 +109,25 @@ const translations = {
     grid_portfolio_content2_card4: "Collaborative project for a mental well-being platform.",
     grid_portfolio_content3_card4: "Using HTML/SCSS",
 
+    contact_heading: "Contact me",
     contact_firstname: "Your first name",
     contact_lastname: "Your last name",
     contact_email: "Your email",
     contact_phone: "Your number",
     contact_text: "Write here ...",
+    form_submit: "Send",
     form_success_message: "Message sent successfully ✅",
+
+    info_heading: "Information",
+    info_phone: "My number: 06 68 51 91 77",
+    info_mail: "My email: giraudsasha@gmail.com",
+    socials_heading: "My Socials :",
+
+    // nav footer translations 
+    nav_footer_home: "Home",
+    nav_footer_competence: "Skills",
+    nav_footer_project: "Projects",
+    nav_footer_contact: "Contact",
   }
 };
 
@@ -132,12 +165,21 @@ document.addEventListener('DOMContentLoaded', () => {
     switcher.classList.toggle('open');
   });
 
+  
   // Clic sur une langue
   options.forEach(opt => {
     opt.addEventListener('click', () => {
       const lang = opt.getAttribute('data-lang');
       applyTranslation(lang);
     });
+  });
+  document.addEventListener('click', (e) => {
+    const isClickInsideswitcher = switcher.contains(e.target);
+    const isClickOnlang = lang.contains(e.target);
+
+    if (!isClickInsideswitcher && !isClickOnlang) {
+      switcher.classList.remove('open');
+    }
   });
 
   // Charger langue sauvegardée ou défaut

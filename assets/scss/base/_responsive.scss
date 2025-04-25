@@ -1,0 +1,65 @@
+// _responsive.scss
+@use "../abstract/variables" as var;
+@use "../base/base";
+
+// Define breakpoints
+$breakpoints: (
+    "xl": 1440px,
+    "lg": 1024px,
+    "md": 768px,
+    "sm": 576px,
+    "xs": 375px
+);
+
+// Mixin for responsive design
+@mixin respond-to($breakpoint) {
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (max-width: map-get($breakpoints, $breakpoint)) {
+            @content;
+        }
+    } @else {
+        @warn "Breakpoint #{$breakpoint} not found in $breakpoints map.";
+    }
+}
+
+// Example usage
+body {
+    font-size: 16px;
+
+    @include respond-to("lg") {
+        font-size: 15px;
+    }
+
+    @include respond-to("md") {
+        font-size: 14px;
+    }
+
+    @include respond-to("sm") {
+        font-size: 13px;
+    }
+
+    @include respond-to("xs") {
+        font-size: 12px;
+    }
+}
+
+// Add responsive styles for other elements as needed
+.container {
+    max-width: 1200px;
+
+    @include respond-to("lg") {
+        max-width: 960px;
+    }
+
+    @include respond-to("md") {
+        max-width: 720px;
+    }
+
+    @include respond-to("sm") {
+        max-width: 540px;
+    }
+
+    @include respond-to("xs") {
+        max-width: 100%;
+    }
+}

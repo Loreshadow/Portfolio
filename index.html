@@ -10,33 +10,45 @@
 <body>
     <header id="accueil">
         <nav>
-            <div class="logo-container">
-                <a href="#accueil"><img src="assets/img/logo-white.png" alt="Logo Giraud Sasha" class="logo"></a>
-            </div>
-            <ul class="menu-items-container">
-                <li><a href="#accueil" class="menu-item" data-i18n="nav_home"></a></li>
-                <li><a href="#compétence" class="menu-item" data-i18n="nav_competence"></a></li>
-                <li><a href="#realisations" class="menu-item" data-i18n="nav_project"></a></li>
-                <li><a href="" class="menu-item" data-i18n="nav_contact"></a></li>
+          <!-- Logo -->
+          <div class="logo-container">
+            <a href="#accueil">
+              <img src="assets/img/logo-white.png" alt="Logo Giraud Sasha" class="logo">
+            </a>
+          </div>
+      
+          <!-- Burger icon for mobile -->
+          <div class="burger" id="burger">
+            <img src="assets/img/menu-icon.png" alt="">
+          </div>
+      
+          <!-- Menu items -->
+          <ul class="menu-items-container" id="menu">
+            <li><a href="#accueil" class="menu-item" data-i18n="nav_home"></a></li>
+            <li><a href="#compétence" class="menu-item" data-i18n="nav_competence"></a></li>
+            <li><a href="#realisations" class="menu-item" data-i18n="nav_project"></a></li>
+            <li><a href="#contact" class="menu-item" data-i18n="nav_contact"></a></li>
+          </ul>
+      
+          <!-- Language switcher -->
+          <div class="lang-switcher">
+            <button class="lang-toggle">Français ⌄</button>
+            <ul class="lang-options">
+              <li data-lang="fr">Français</li>
+              <li data-lang="en">English</li>
             </ul>
-            <div class="lang-switcher">
-                <button class="lang-toggle">Français ⌄</button>
-                <ul class="lang-options">
-                  <li data-lang="fr">Français</li>
-                  <li data-lang="en">English</li>
-                </ul>
-            </div>
-              <!-- <h1 data-i18n="home_title"></h1>
-              <p data-i18n="home_intro"></p> -->
+          </div>
         </nav>
+      
+        <!-- Bannière -->
         <div class="banner">
-            <div class="banner-content">
-                    <h2 class="banner-text">"Hello World!"</h2>
-                    <h1 class="banner-title">Giraud Sasha</h1>
-                    <p class="banner-text">Développeur web & Web Mobile </p>
-            </div>
+          <div class="banner-content">
+            <h2 class="banner-text">"Hello World!"</h2>
+            <h1 class="banner-title">Giraud Sasha</h1>
+            <p class="banner-text" data-i18n="banner_text">Développeur web & Web Mobile</p>
+          </div>
         </div>
-    </header>
+      </header>
     <main>
         <section id="compétence">
             <div class="competence-heading">
@@ -144,51 +156,54 @@
         </section>
     </main>
     <footer class="site-footer">
-        <div class="footer-top">
-          <!-- Logo -->
-          <div class="footer-logo">
-            <a href="#accueil"><img src="assets/img/logo-white.png" alt="Logo Giraud Sasha" class="logo"></a>
-          </div>
-      
+        <div class="footer-heading">
+
+            <div class="footer-top">
+                <!-- Logo -->
+                <div class="footer-logo">
+                    <a href="#accueil"><img src="assets/img/logo-white.png" alt="Logo Giraud Sasha" class="logo"></a>
+                </div>
+                
           <!-- Formulaire de contact -->
           <div class="footer-contact">
-            <p class="contact-title">Me contacter :</p>
-            <form id="contact-form" class="contact-form">
-              <input type="text"
-              data-i18n-placeholder="contact_lastname" placeholder="Votre nom" required>
-              <input type="text" data-i18n-placeholder="contact_firstname" placeholder="Votre prénom" required>
-              <input type="email"
-              data-i18n-placeholder="contact_email" placeholder="Votre Email" required>
-              <input type="tel" id="phone" data-i18n-placeholder="contact_phone" placeholder="Votre numéro" required>
-              <input class="textarea" type="text" data-i18n-placeholder="contact_text" placeholder="Écrivez ici ..." required>
-              <button type="button" id="submit-btn">Envoyer</button>
-              <p id="form-message" class="form-message" data-i18n="form_success_message"></p>
-            </form>
-          </div>
-      
-          <!-- Informations & réseaux -->
-          <div class="footer-info">
-            <p class="info-title">Mes informations</p>
-            <p>Mon numéro : xx xx xx xx xx</p>
-            <p>Mon email : email@email.fr</p>
-      
-            <p class="social-title">Mes réseaux :</p>
-            <div class="social-icons">
-              <a href="#"><img src="assets/svg/Instagram.svg" alt="Instagram"></a>
-              <a href="#"><img src="assets/svg/Facebook.svg" alt="Facebook"></a>
-              <a href="#"><img src="assets/svg/X.svg" alt="Twitter / X"></a>
-              <a href="#"><img src="assets/svg/Discord.svg" alt="Discord"></a>
+              <p class="contact-title" data-i18n="contact_heading"></p>
+              <form id="contact-form" class="contact-form">
+                  <input type="text"
+                  data-i18n-placeholder="contact_lastname" placeholder="Votre nom" required>
+                  <input type="text" data-i18n-placeholder="contact_firstname" placeholder="Votre prénom" required>
+                  <input type="email"
+                  data-i18n-placeholder="contact_email" placeholder="Votre Email" required>
+                  <input type="tel" id="phone" data-i18n-placeholder="contact_phone" placeholder="Votre numéro" required>
+                  <input class="textarea" type="text" data-i18n-placeholder="contact_text" placeholder="Écrivez ici ..." required>
+                  <button type="button" id="submit-btn" data-i18n="form_submit"></button>
+                  <p id="form-message" class="form-message" data-i18n="form_success_message"></p>
+                </form>
             </div>
-          </div>
+            
         </div>
+        <!-- Informations & réseaux -->
+        <div class="footer-info">
+            <p class="info-title" data-i18n="info_heading">Mes informations</p>
+            <p data-i18n="info_phone">Mon numéro : xx xx xx xx xx</p>
+            <p data-i18n="info_mail">Mon email : email@email.fr</p>
+            
+            <p class="social-title" data-i18n="socials_heading">Mes réseaux :</p>
+            <div class="social-icons">
+                <a href="#"><img src="assets/svg/Instagram.svg" alt="Instagram"></a>
+                <a href="#"><img src="assets/svg/Facebook.svg" alt="Facebook"></a>
+                <a href="#"><img src="assets/svg/X.svg" alt="Twitter / X"></a>
+                <a href="#"><img src="assets/svg/Discord.svg" alt="Discord"></a>
+            </div>
+        </div>
+    </div>
       
         <!-- Navigation bas -->
         <div class="footer-bottom">
           <nav>
-            <a href="#accueil">Accueil</a>
-            <a href="#compétence">Compétence</a>
-            <a href="#realisations">Réalisations</a>
-            <a href="#contact">Contact</a>
+            <a href="#accueil" data-i18n="nav_footer_home">Accueil</a>
+            <a href="#compétence" data-i18n="nav_footer_competence">Compétence</a>
+            <a href="#realisations" data-i18n="nav_footer_project">Réalisations</a>
+            <a href="#contact" data-i18n="nav_footer_contact">Contact</a>
           </nav>
         </div>
       </footer>

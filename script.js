@@ -12,6 +12,29 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// menu de nav mobile/desktop 1440px 
+
+document.addEventListener('DOMContentLoaded', () => {
+  const burger = document.querySelector('.burger');
+  const menu = document.querySelector('.menu-items-container');
+
+  // Toggle ouverture menu
+  burger.addEventListener('click', (e) => {
+    e.stopPropagation(); // évite que le clic sur le burger ferme aussitôt
+    menu.classList.toggle('open');
+  });
+
+  // Ferme le menu si on clique ailleurs
+  document.addEventListener('click', (e) => {
+    const isClickInsideMenu = menu.contains(e.target);
+    const isClickOnBurger = burger.contains(e.target);
+
+    if (!isClickInsideMenu && !isClickOnBurger) {
+      menu.classList.remove('open');
+    }
+  });
+});
+
 // Carroussel
 document.addEventListener('DOMContentLoaded', () => {
   const container = document.querySelector('#compétence-secondary .card-container-secondary');
