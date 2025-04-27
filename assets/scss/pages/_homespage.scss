@@ -3,6 +3,18 @@
 
 // SCSS de la section compétence 
 
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  box-sizing: border-box;
+  position: relative;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
 .competence-heading {
     text-align: center;
     margin-top: 2.5%;

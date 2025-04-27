@@ -135,22 +135,3 @@
           }
       }
     }
-  
-    @media (max-width: 768px) {
-      .footer-top {
-        flex-direction: column;
-        align-items: center;
-  
-        .footer-contact {
-          width: 100%;
-        }
-  
-        .footer-info {
-          text-align: center;
-        }
-  
-        .footer-logo {
-          text-align: center;
-        }
-      }
-    }

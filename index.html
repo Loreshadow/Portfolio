@@ -1,228 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Giraud Sasha</title>
-
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio Giraud Sasha</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header id="accueil">
-        <nav>
-          <!-- Logo -->
-          <div class="logo-container">
-            <a href="#accueil">
-              <img src="assets/img/logo-white.png" alt="Logo Giraud Sasha" class="logo">
-            </a>
-          </div>
-      
-          <!-- Burger icon for mobile -->
-          <div class="burger" id="burger">
-            <img src="assets/img/menu-icon.png" alt="">
-          </div>
-      
-          <!-- Menu items -->
-          <ul class="menu-items-container" id="menu">
-            <li><a href="#accueil" class="menu-item" data-i18n="nav_home"></a></li>
-            <li><a href="#compétence" class="menu-item" data-i18n="nav_competence"></a></li>
-            <li><a href="#realisations" class="menu-item" data-i18n="nav_project"></a></li>
-            <li><a href="#contact" class="menu-item" data-i18n="nav_contact"></a></li>
-          </ul>
-      
-          <!-- Language switcher -->
-          <div class="lang-switcher">
-            <button class="lang-toggle">Français ⌄</button>
-            <ul class="lang-options">
-              <li data-lang="fr">Français</li>
-              <li data-lang="en">English</li>
-            </ul>
-          </div>
-        </nav>
-      
-        <!-- Bannière -->
-        <div class="banner">
-          <div class="banner-content">
-            <h2 class="banner-text">"Hello World!"</h2>
-            <h1 class="banner-title">Giraud Sasha</h1>
-            <p class="banner-text" data-i18n="banner_text">Développeur web & Web Mobile</p>
-          </div>
-        </div>
-      </header>
-    <main>
-        <section id="compétence">
-            <div class="competence-heading">
-                <h2 data-i18n="competence_heading"></h2>
-            </div>
-            <div class="cards-container">
-                <div class="card">
-                  <div class="card-overlay"></div>
-                    <div class="card-img-container">
-                        <img src="assets/img/html5.png" alt="">
-                    </div>
-                    <div class="card-content">
-                        <p data-i18n="competence_content_card1"></p>
-                        <p data-i18n="competence_content2_card1"></p>
-                    </div>
-                </div>
-                <div class="card">
-                  <div class="card-overlay"></div>
-                    <div class="card-img-container">
-                        <img src="assets/img/css3.png" alt="">
-                    </div>
-                    <div class="card-content">
-                        <p data-i18n="competence_content_card2"></p>
-                        <p data-i18n="competence_content2_card2"></p>
-                    </div>
-                </div>
-                <div class="card">
-                  <div class="card-overlay"></div>
-                    <div class="card-img-container">
-                        <img src="assets/img/JavaScript.png" alt="">
-                    </div>
-                    <div class="card-content">
-                        <p data-i18n="competence_content_card3"></p></p>
-                        <p data-i18n="competence_content2_card3"></p></p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="compétence-secondary">
-        <div class="secondary-compétence-heading">
-                <h2 data-i18n="competence_sec_heading"></h2>
-        </div>
-        <div class="card-container-secondary">
-            <div class="card-secondary">
-              <div class="card-overlay-secondary"></div>
-                <div class="card-img-container">
-                        <img src="assets/img/icons8-sass-96.png" alt="">
-                </div>
-                <div class="card-content-secondary">
-                    <p data-i18n="competence_sec_content_card1"></p>
-                    <p data-i18n="competence_sec_content2_card1"></p>
-                </div>
-            </div>
-            <div class="card-secondary">
-              <div class="card-overlay-secondary"></div>
-                <div class="card-img-container">
-                        <img src="assets/img/tailwind.webp" alt="">
-                </div>
-                <div class="card-content-secondary">
-                    <p data-i18n="competence_sec_content_card2"></p>
-                    <p data-i18n="competence_sec_content2_card2"></p>
-                </div>
-            </div>
-            <div class="card-secondary">
-              <div class="card-overlay-secondary"></div>
-                <div class="card-img-container">
-                    <img src="assets/img/icons8-figma-96.png" alt="">
-                </div>
-                <div class="card-content-secondary">
-                    <p data-i18n="competence_sec_content_card3"></p>
-                    <p data-i18n="competence_sec_content2_card3"></p>
-                </div>
-            </div>
-            <input type="range" id="slide-range" min="0" max="2" value="0" aria-label="Sélecteur de slide">
-        </div>
-        </section>
-        <section id="realisations">
-            <div class="real-heading">
-                <h2 data-i18n="grid_portfolio_heading"></h2>
-            </div>
-            <div class="grid-portfolio">
-                <div class="card">
-                  <div class="card-content">
-                    <h3 data-i18n="grid_portfolio_content_card1"></h3>
-                    <p data-i18n="grid_portfolio_content2_card1"></p>
-                    <span data-i18n="grid_portfolio_content3_card1"></span>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-content">
-                    <h3 data-i18n="grid_portfolio_content_card2"></h3>
-                    <p data-i18n="grid_portfolio_content2_card2"></p></p>
-                    <span data-i18n="grid_portfolio_content3_card2"></span></span>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-content">
-                    <h3 data-i18n="grid_portfolio_content_card3"></h3>
-                    <p data-i18n="grid_portfolio_content2_card3"></p>
-                    <span data-i18n="grid_portfolio_content3_card3"></span>
-                  </div>
-                </div>
-                <div class="card">
-                  <div class="card-content">
-                    <h3 data-i18n="grid_portfolio_content_card4"></h3>
-                    <p data-i18n="grid_portfolio_content2_card4"></p>
-                    <span data-i18n="grid_portfolio_content3_card4"></span>
-                  </div>
-                </div>
-            </div>
-        </section>
-    </main>
-    <footer class="site-footer" id="contact">
-        <div class="footer-heading">
 
-            <div class="footer-top">
-                <!-- Logo -->
-                <div class="footer-logo">
-                    <a href="#accueil"><img src="assets/img/logo-white.png" alt="Logo Giraud Sasha" class="logo"></a>
-                </div>
-                
-          <!-- Formulaire de contact -->
-          <div class="footer-contact">
-              <p class="contact-title" data-i18n="contact_heading"></p>
-              <form id="contact-form" class="contact-form">
-                  <input type="text"
-                  data-i18n-placeholder="contact_lastname" placeholder="Votre nom" required>
-                  <input type="text" data-i18n-placeholder="contact_firstname" placeholder="Votre prénom" required>
-                  <input type="email"
-                  data-i18n-placeholder="contact_email" placeholder="Votre Email" required>
-                  <input type="tel" id="phone" data-i18n-placeholder="contact_phone" placeholder="Votre numéro" required>
-                  <input class="textarea" type="text" data-i18n-placeholder="contact_text" placeholder="Écrivez ici ..." required>
-                  <button type="button" id="submit-btn" data-i18n="form_submit"></button>
-                  <p id="form-message" class="form-message" data-i18n="form_success_message"></p>
-                </form>
-            </div>
-            
-        </div>
-        <!-- Informations & réseaux -->
-        <div class="footer-info">
-            <p class="info-title" data-i18n="info_heading">Mes informations</p>
-            <p data-i18n="info_phone">Mon numéro : xx xx xx xx xx</p>
-            <p data-i18n="info_mail">Mon email : email@email.fr</p>
-            
-            <p class="social-title" data-i18n="socials_heading">Mes réseaux :</p>
-            <div class="social-icons">
-                <a href="#accueil"><img src="assets/svg/Instagram.svg" alt="Instagram"></a>
-                <a href="#compétence"><img src="assets/svg/Facebook.svg" alt="Facebook"></a>
-                <a href="#realisations"><img src="assets/svg/X.svg" alt="Twitter / X"></a>
-                <a href="#contact"><img src="assets/svg/Discord.svg" alt="Discord"></a>
-            </div>
-        </div>
+  <header id="accueil">
+    <nav>
+      <!-- Logo -->
+      <div class="logo-container">
+        <a href="#accueil">
+          <img src="assets/img/logo-white.png" alt="Logo Giraud Sasha" class="logo">
+        </a>
+      </div>
+
+      <!-- Menu items -->
+      <ul class="menu-items-container" id="menu">
+        <li><a href="#accueil" class="menu-item" data-i18n="nav_home"></a></li>
+        <li><a href="#compétence" class="menu-item" data-i18n="nav_competence"></a></li>
+        <li><a href="#realisations" class="menu-item" data-i18n="nav_project"></a></li>
+        <li><a href="#contact" class="menu-item" data-i18n="nav_contact"></a></li>
+      </ul>
+
+      <!-- Language switcher -->
+      <div class="lang-switcher">
+        <button class="lang-toggle">Français ⌄</button>
+        <ul class="lang-options">
+          <li data-lang="fr">Français</li>
+          <li data-lang="en">English</li>
+        </ul>
+      </div>
+
+      <!-- Burger icon for mobile -->
+      <div class="burger" id="burger">
+        <img src="assets/img/menu-icon.png" alt="">
+      </div>
+    </nav>
+
+    <!-- Bannière -->
+    <div class="banner">
+      <div class="banner-content">
+        <h2 class="banner-text">"Hello World!"</h2>
+        <h1 class="banner-title">Giraud Sasha</h1>
+        <p class="banner-text" data-i18n="banner_text">Développeur web & Web Mobile</p>
+      </div>
     </div>
-      
-        <!-- Navigation bas -->
-        <div class="footer-bottom">
-          <nav>
-            <a href="#accueil" data-i18n="nav_footer_home">Accueil</a>
-            <a href="#compétence" data-i18n="nav_footer_competence">Compétence</a>
-            <a href="#realisations" data-i18n="nav_footer_project">Réalisations</a>
-            <a href="#contact" data-i18n="nav_footer_contact">Contact</a>
-          </nav>
+  </header>
+
+  <main>
+
+    <!-- Section Compétences -->
+    <section id="compétence">
+      <div class="competence-heading">
+        <h2 data-i18n="competence_heading"></h2>
+      </div>
+
+      <div class="cards-container">
+        <div class="card">
+          <div class="card-overlay"></div>
+          <div class="card-img-container">
+            <img src="assets/img/html5.png" alt="">
+          </div>
+          <div class="card-content">
+            <p data-i18n="competence_content_card1"></p>
+            <p data-i18n="competence_content2_card1"></p>
+          </div>
         </div>
-      </footer>
-    <div class="lightbox" id="lightbox">
-        <span id="lightbox-close" class="lightbox-close">&times;</span>
 
-        <button class="lightbox-nav prev" id="lightbox-prev">&#10094;</button>
+        <div class="card">
+          <div class="card-overlay"></div>
+          <div class="card-img-container">
+            <img src="assets/img/css3.png" alt="">
+          </div>
+          <div class="card-content">
+            <p data-i18n="competence_content_card2"></p>
+            <p data-i18n="competence_content2_card2"></p>
+          </div>
+        </div>
 
-        <img class="lightbox-img" id="lightbox-img" src="" alt="Image zoomée">
+        <div class="card">
+          <div class="card-overlay"></div>
+          <div class="card-img-container">
+            <img src="assets/img/JavaScript.png" alt="">
+          </div>
+          <div class="card-content">
+            <p data-i18n="competence_content_card3"></p>
+            <p data-i18n="competence_content2_card3"></p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <button class="lightbox-nav next" id="lightbox-next">&#10095;</button>
+    <!-- Section Compétences secondaires -->
+    <section id="compétence-secondary">
+      <div class="secondary-compétence-heading">
+        <h2 data-i18n="competence_sec_heading"></h2>
+      </div>
+
+      <div class="card-container-secondary">
+        <div class="card-secondary">
+          <div class="card-overlay-secondary"></div>
+          <div class="card-img-container">
+            <img src="assets/img/icons8-sass-96.png" alt="">
+          </div>
+          <div class="card-content-secondary">
+            <p data-i18n="competence_sec_content_card1"></p>
+            <p data-i18n="competence_sec_content2_card1"></p>
+          </div>
+        </div>
+
+        <div class="card-secondary">
+          <div class="card-overlay-secondary"></div>
+          <div class="card-img-container">
+            <img src="assets/img/tailwind.webp" alt="">
+          </div>
+          <div class="card-content-secondary">
+            <p data-i18n="competence_sec_content_card2"></p>
+            <p data-i18n="competence_sec_content2_card2"></p>
+          </div>
+        </div>
+
+        <div class="card-secondary">
+          <div class="card-overlay-secondary"></div>
+          <div class="card-img-container">
+            <img src="assets/img/icons8-figma-96.png" alt="">
+          </div>
+          <div class="card-content-secondary">
+            <p data-i18n="competence_sec_content_card3"></p>
+            <p data-i18n="competence_sec_content2_card3"></p>
+          </div>
+        </div>
+
+        <input type="range" id="slide-range" min="0" max="2" value="0" aria-label="Sélecteur de slide">
+      </div>
+    </section>
+
+    <!-- Section Réalisations -->
+    <section id="realisations">
+      <div class="real-heading">
+        <h2 data-i18n="grid_portfolio_heading"></h2>
+      </div>
+
+      <div class="grid-portfolio">
+        <div class="card">
+          <div class="card-content">
+            <h3 data-i18n="grid_portfolio_content_card1"></h3>
+            <p data-i18n="grid_portfolio_content2_card1"></p>
+            <span data-i18n="grid_portfolio_content3_card1"></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3 data-i18n="grid_portfolio_content_card2"></h3>
+            <p data-i18n="grid_portfolio_content2_card2"></p>
+            <span data-i18n="grid_portfolio_content3_card2"></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3 data-i18n="grid_portfolio_content_card3"></h3>
+            <p data-i18n="grid_portfolio_content2_card3"></p>
+            <span data-i18n="grid_portfolio_content3_card3"></span>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-content">
+            <h3 data-i18n="grid_portfolio_content_card4"></h3>
+            <p data-i18n="grid_portfolio_content2_card4"></p>
+            <span data-i18n="grid_portfolio_content3_card4"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" id="contact">
+    <div class="footer-heading">
+
+      <div class="footer-top">
+        <!-- Logo -->
+        <div class="footer-logo">
+          <a href="#accueil">
+            <img src="assets/img/logo-white.png" alt="Logo Giraud Sasha" class="logo">
+          </a>
+        </div>
+
+        <!-- Formulaire de contact -->
+        <div class="footer-contact">
+          <p class="contact-title" data-i18n="contact_heading"></p>
+          <form id="contact-form" class="contact-form">
+            <input type="text" data-i18n-placeholder="contact_lastname" placeholder="Votre nom" required>
+            <input type="text" data-i18n-placeholder="contact_firstname" placeholder="Votre prénom" required>
+            <input type="email" data-i18n-placeholder="contact_email" placeholder="Votre Email" required>
+            <input type="tel" id="phone" data-i18n-placeholder="contact_phone" placeholder="Votre numéro" required>
+            <input class="textarea" type="text" data-i18n-placeholder="contact_text" placeholder="Écrivez ici ..." required>
+            <button type="button" id="submit-btn" data-i18n="form_submit"></button>
+            <p id="form-message" class="form-message" data-i18n="form_success_message"></p>
+          </form>
+        </div>
+      </div>
+
+      <!-- Informations & réseaux -->
+      <div class="footer-info">
+        <p class="info-title" data-i18n="info_heading">Mes informations</p>
+        <p data-i18n="info_phone">Mon numéro : xx xx xx xx xx</p>
+        <p data-i18n="info_mail">Mon email : email@email.fr</p>
+
+        <p class="social-title" data-i18n="socials_heading">Mes réseaux :</p>
+        <div class="social-icons">
+          <a href="#accueil"><img src="assets/svg/Instagram.svg" alt="Instagram"></a>
+          <a href="#compétence"><img src="assets/svg/Facebook.svg" alt="Facebook"></a>
+          <a href="#realisations"><img src="assets/svg/X.svg" alt="Twitter / X"></a>
+          <a href="#contact"><img src="assets/svg/Discord.svg" alt="Discord"></a>
+        </div>
+      </div>
+
     </div>
-    <script src="script.js"></script>
-    <script src="translation.js"></script>
+
+    <!-- Navigation bas -->
+    <div class="footer-bottom">
+      <nav>
+        <a href="#accueil" data-i18n="nav_footer_home">Accueil</a>
+        <a href="#compétence" data-i18n="nav_footer_competence">Compétence</a>
+        <a href="#realisations" data-i18n="nav_footer_project">Réalisations</a>
+        <a href="#contact" data-i18n="nav_footer_contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span id="lightbox-close" class="lightbox-close">&times;</span>
+    <button class="lightbox-nav prev" id="lightbox-prev">&#10094;</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Image zoomée">
+    <button class="lightbox-nav next" id="lightbox-next">&#10095;</button>
+  </div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+  <script src="translation.js"></script>
+
 </body>
 </html>

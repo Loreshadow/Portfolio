@@ -2,17 +2,19 @@
 @use "../abstract/variables" as var;
 @use "../base/base";
 @use "../layout/header";
+@use "../layout/footer";
+@use "../pages/homespage";
 
 
 @media (max-width: 1440px) {
     header {
         nav {
             .burger {
+                position: relative;
               display: flex;
               visibility: visible;
-              align-self: center;
-              justify-content: center;
               width: 4%;
+              margin-right: -7.5%;
               img {
                 visibility: visible;
               }
@@ -32,7 +34,7 @@
             .menu-items-container {
               position: absolute;
               top: 100%;
-              left: 74.75%;
+              right: -7.5%;
               transform: translate(-100%, -10%);
               background-color: var(--bg, var.$couleur-secondaire);
               border: 1px solid #444;
@@ -42,7 +44,7 @@
               display: none;
               visibility: hidden;
               flex-direction: column;
-              align-items: flex-start;
+              align-items: center;
               gap: 0.8rem;
               z-index: 100;
               box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
@@ -72,7 +74,7 @@
             }
           
             .lang-switcher {
-              margin-top: 1rem;
+              margin-right: -25%;
             }
             &.scrolled {
                 .burger {
@@ -84,7 +86,6 @@
                     flex-direction: column;
                     align-items: center;
                     gap: 2rem;
-                    margin-left: -15.75%;
             
                     .menu-item {
                       font-size: 1.5rem;
@@ -94,3 +95,219 @@
         }
     }
 }
+
+
+// responsive 1024px 
+
+@media (max-width: 1024px) {
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.5rem;
+        
+            .card {
+                width: 50%;
+                max-height: 800px;      
+            }
+    }
+    header {
+
+        nav {
+            padding: 1%;
+            .logo-container {
+                width: 20%;
+                img {
+                    width: 100%;
+                }
+            }
+            .burger {
+                position: relative;
+                display: flex;
+                visibility: visible;
+                width: 6%;
+          margin-right: -7.5%;
+          img {
+            width: 100%;
+          }
+        }
+        
+        .menu-items-container {
+            position: absolute;
+            top: 100%;
+            right: -12.5%;
+        }
+        
+        .lang-switcher {
+            margin-right: -25%;
+        }
+        &.scrolled {
+            .burger {
+                display: flex;
+                visibility: visible;
+            }
+        }
+    }
+}
+    .site-footer {
+        .footer-heading {
+            flex-direction: column;
+            align-items: center;
+            gap: 5rem;
+            .footer-top {
+                flex-direction: column;
+                align-items: center;
+          
+                .footer-contact {
+                  width: 100%;
+                }
+          
+                .footer-info {
+                  text-align: center;
+                }
+          
+                .footer-logo {
+                  text-align: center;
+                }
+              }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .cards-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3.5rem;
+        
+            .card {
+                width: 60%;
+                max-height: 600px;      
+            }
+    }
+}
+
+@media (max-width: 636px) {
+
+    header {
+        nav {
+            max-width: 100%;
+            .logo-container {
+                width: 30%;
+                img {
+                    width: 100%;
+                }
+            }
+            .lang-switcher {
+                margin-right: -15%;
+            }
+            .burger {
+                position: relative;
+                display: flex;
+                visibility: visible;
+                width: 8%;
+                img {
+                    width: 100%;
+                }
+        
+            }
+        }
+    }
+}
+@media (max-width: 425px) {
+
+    header {
+        .banner {
+            width: 100%;
+        }
+        nav {
+            max-width: 100%;
+            .logo-container {
+                width: 40%;
+                img {
+                    width: 100%;
+                }
+            }
+            &.scrolled {
+                .logo-container {
+                    width: 40%;
+                    img {
+                        width: 100%;
+                    }
+                }
+            }
+            .lang-switcher {
+                margin-right: 0;
+            }
+            .burger {
+                position: relative;
+                display: flex;
+                visibility: visible;
+                width: 10%;
+                margin-right: 0;
+                img {
+                    width: 100%;
+                }
+        
+            }
+        }
+    }
+
+    .cards-container {
+        gap: 3.5rem;
+        .card {
+            width: 85%;
+            max-height: 800px;      
+        }
+    }
+
+    #compétence-secondary {
+        .secondary-compétence-heading {
+            text-align: center;
+            margin-top: 4.5%;
+            margin-bottom: 25%;
+        }
+        .card-container-secondary {
+            .card-secondary {
+                margin-top: 25%;
+                width: 70%;
+                max-height: 700px;      
+            }
+        }
+    }
+
+    .site-footer {
+        .footer-heading {
+            .footer-top {
+                .footer-contact {
+                    display: flex;
+                    flex-direction: column;
+                    width: 80%;
+                    form {
+                        display: flex;
+                        flex-direction: column;
+                    }
+                }
+                .footer-contact {
+                    width: 70%;
+                    input  {
+                      max-width: 100%;
+                    }
+                  }
+            }
+            .footer-info {
+                text-align: center;
+                p:nth-of-type(3) {
+                    margin-bottom: 1rem;
+                }
+            }
+        }
+        .footer-bottom { 
+            visibility: hidden;
+            display: none;
+        }
+    }
+}
+
+
