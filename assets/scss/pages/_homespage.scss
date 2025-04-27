@@ -21,21 +21,35 @@
         border-radius: 15px;
         margin-top: 7.5%;
         width: 20%;
+        .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 15px;
+            z-index: 1;
+        }
         .card-img-container {
             position: absolute;
             left: 25%;
             top: -15%;
             width: 50%;
+            z-index: 3;
             img {
                 width: 100%;
             }
         }
         .card-content {
+          position: relative;
             padding: 0 10%;
             margin-top: 50%;
             margin-bottom: 50%;
+            z-index: 3;
             p {
                 padding: 2.5%;
+                font-size: 1.5rem;
             }
         }
     }
@@ -47,32 +61,15 @@
     }
 }
 .card-secondary {
-    position: relative;
-    border: 3px solid var.$couleur-accent;
-    background-image: url(../img/HTML-BG.jpg);
-    background-size: cover;
-    color: var.$couleur-principale;
-    text-align: center;
-    border-radius: 15px;
-    margin-top: 7.5%;
-    width: 20%;
-    .card-img-container {
-        position: absolute;
-        left: 25%;
-        top: -15%;
-        width: 50%;
-        img {
-            width: 100%;
-        }
-    }
-    .card-content {
-        padding: 0 10%;
-        margin-top: 50%;
-        margin-bottom: 50%;
-        p {
-            padding: 2.5%;
-        }
-    }
+  position: relative;
+  border: 3px solid var.$couleur-accent;
+  background-image: url(../img/HTML-BG.jpg);
+  background-size: cover;
+  color: var.$couleur-principale;
+  text-align: center;
+  border-radius: 15px;
+  margin-top: 7.5%;
+  width: 20%;
 }
 
 #compétence-secondary {
@@ -97,15 +94,28 @@
       top: 0;
       height: 550px;
       transition: all 0.4s ease-in-out;
+      .card-overlay-secondary {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.315);
+        border-radius: 15px;
+        z-index: 1;
+      }
       .card-content-secondary {
+        position: relative;
         padding-top: 25%;
         font-size: 2rem;
+        z-index: 3;
       }
       .card-img-container {
         position: absolute;
         left: 37.5%;
         top: -10%;
         width: 25%;
+        z-index: 3;
         img {
             width: 100%;
         }

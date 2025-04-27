@@ -1,65 +1,96 @@
 // _responsive.scss
 @use "../abstract/variables" as var;
 @use "../base/base";
+@use "../layout/header";
 
-// Define breakpoints
-$breakpoints: (
-    "xl": 1440px,
-    "lg": 1024px,
-    "md": 768px,
-    "sm": 576px,
-    "xs": 375px
-);
 
-// Mixin for responsive design
-@mixin respond-to($breakpoint) {
-    @if map-has-key($breakpoints, $breakpoint) {
-        @media (max-width: map-get($breakpoints, $breakpoint)) {
-            @content;
+@media (max-width: 1440px) {
+    header {
+        nav {
+            .burger {
+              display: flex;
+              visibility: visible;
+              align-self: center;
+              justify-content: center;
+              width: 4%;
+              img {
+                visibility: visible;
+              }
+              cursor: pointer;
+              flex-direction: column;
+              gap: 5px;
+              z-index: 101;
+          
+              span {
+                width: 25px;
+                height: 3px;
+                background-color: white;
+                transition: all 0.3s ease;
+              }
+            }
+            
+            .menu-items-container {
+              position: absolute;
+              top: 100%;
+              left: 74.75%;
+              transform: translate(-100%, -10%);
+              background-color: var(--bg, var.$couleur-secondaire);
+              border: 1px solid #444;
+              border-radius: 6px;
+              padding: 0.5rem 1rem;
+              list-style: none;
+              display: none;
+              visibility: hidden;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 0.8rem;
+              z-index: 100;
+              box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+              width: max-content;
+          
+              &.open {
+                display: flex;
+                visibility: visible;
+              }
+          
+              .menu-item {
+                font-size: 1.2rem;
+                color: var.$couleur-principale;
+                text-decoration: none;
+                outline: 0.5px solid #C46D5E;
+                outline-offset: 1px;
+                border-radius: 4px;
+                padding: 0.1rem 0.6rem;
+                background-color: rgba(255, 255, 255, 0.05);
+                margin-bottom: 0.75rem;
+          
+                &:hover {
+                  color: #C46D5E;
+                  outline: 0.1px solid white;
+                }
+              }
+            }
+          
+            .lang-switcher {
+              margin-top: 1rem;
+            }
+            &.scrolled {
+                .burger {
+                    display: flex;
+                    visibility: visible;
+                }
+                .menu-items-container {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: 2rem;
+                    margin-left: -15.75%;
+            
+                    .menu-item {
+                      font-size: 1.5rem;
+                    }
+                }
+            }
         }
-    } @else {
-        @warn "Breakpoint #{$breakpoint} not found in $breakpoints map.";
-    }
-}
-
-// Example usage
-body {
-    font-size: 16px;
-
-    @include respond-to("lg") {
-        font-size: 15px;
-    }
-
-    @include respond-to("md") {
-        font-size: 14px;
-    }
-
-    @include respond-to("sm") {
-        font-size: 13px;
-    }
-
-    @include respond-to("xs") {
-        font-size: 12px;
-    }
-}
-
-// Add responsive styles for other elements as needed
-.container {
-    max-width: 1200px;
-
-    @include respond-to("lg") {
-        max-width: 960px;
-    }
-
-    @include respond-to("md") {
-        max-width: 720px;
-    }
-
-    @include respond-to("sm") {
-        max-width: 540px;
-    }
-
-    @include respond-to("xs") {
-        max-width: 100%;
     }
 }
