@@ -239,7 +239,7 @@ header nav .lang-switcher.open .lang-options {
   header nav .menu-items-container {
     position: absolute;
     top: 100%;
-    left: 41.75%;
+    left: 75.75%;
     transform: translate(-100%, -10%);
     background-color: var(--bg, #22333B);
     border: 1px solid #444;
@@ -286,11 +286,49 @@ header nav.scrolled .logo-container {
 }
 header nav.scrolled .burger {
   display: flex;
+  visibility: visible;
   align-self: center;
   justify-self: center;
   width: 4%;
   margin-top: -0.5%;
   margin-left: -5%;
+}
+header nav.scrolled .menu-items-container {
+  position: absolute;
+  top: 100%;
+  left: 96.75%;
+  transform: translate(-100%, -10%);
+  background-color: var(--bg, #22333B);
+  border: 1px solid #444;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  list-style: none;
+  display: none;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8rem;
+  z-index: 100;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  width: max-content;
+}
+header nav.scrolled .menu-items-container.open {
+  display: flex;
+}
+header nav.scrolled .menu-items-container .menu-item {
+  font-size: 1.2rem;
+  color: #F2F4F3;
+  text-decoration: none;
+  outline: 0.5px solid #C46D5E;
+  outline-offset: 1px;
+  border-radius: 4px;
+  padding: 0.1rem 0.6rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+header nav.scrolled .menu-items-container .menu-item:hover {
+  color: #C46D5E;
+  outline: 0.1px solid white;
 }
 header nav.scrolled .lang-switcher {
   margin-top: -0.5%;
@@ -549,6 +587,7 @@ header nav.scrolled .lang-switcher {
 }
 #compétence-secondary .card-secondary .card-content-secondary {
   padding-top: 25%;
+  font-size: 2rem;
 }
 #compétence-secondary .card-secondary .card-img-container {
   position: absolute;
