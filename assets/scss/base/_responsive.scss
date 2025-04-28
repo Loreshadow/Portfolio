@@ -186,7 +186,37 @@
                 max-height: 600px;      
             }
     }
+    header {
+        nav {
+            .burger {
+                position: relative;
+                display: flex;
+                visibility: visible;
+                width: 6%;
+          img {
+            width: 100%;
+            }
+          }
+        }
+        
+        .menu-items-container.open {
+            position: absolute;
+            top: 100%;
+            right: -21.5%;
+        }
+        
+        .lang-switcher {
+            margin-right: -25%;
+        }
+        &.scrolled {
+            .burger {
+                display: flex;
+                visibility: visible;
+            }
+        }
+    }
 }
+
 
 @media (max-width: 636px) {
 
@@ -212,6 +242,11 @@
                 }
         
             }
+        }
+        .menu-items-container.open {
+            position: absolute;
+            top: 100%;
+            right: -26.5%;
         }
     }
 }
@@ -251,6 +286,11 @@
                 }
         
             }
+        }
+        .menu-items-container.open {
+            position: absolute;
+            top: 100%;
+            right: -38.5%;
         }
     }
 

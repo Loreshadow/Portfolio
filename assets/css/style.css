@@ -767,6 +767,27 @@ html, body {
     width: 60%;
     max-height: 600px;
   }
+  header nav .burger {
+    position: relative;
+    display: flex;
+    visibility: visible;
+    width: 6%;
+  }
+  header nav .burger img {
+    width: 100%;
+  }
+  header .menu-items-container.open {
+    position: absolute;
+    top: 100%;
+    right: -21.5%;
+  }
+  header .lang-switcher {
+    margin-right: -25%;
+  }
+  header.scrolled .burger {
+    display: flex;
+    visibility: visible;
+  }
 }
 @media (max-width: 636px) {
   header nav {
@@ -789,6 +810,11 @@ html, body {
   }
   header nav .burger img {
     width: 100%;
+  }
+  header .menu-items-container.open {
+    position: absolute;
+    top: 100%;
+    right: -26.5%;
   }
 }
 @media (max-width: 425px) {
@@ -822,6 +848,11 @@ html, body {
   }
   header nav .burger img {
     width: 100%;
+  }
+  header .menu-items-container.open {
+    position: absolute;
+    top: 100%;
+    right: -38.5%;
   }
   .cards-container {
     gap: 3.5rem;
