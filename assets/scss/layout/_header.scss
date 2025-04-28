@@ -158,12 +158,27 @@ header {
 }
 
 .banner {
+  position: relative;
   background-image: url(../img/banner.jpg);
   background-position: center;
   background-size: cover;
   height: 100vh;
+  z-index: 2;
+
+  .banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.283);
+    z-index: 3;
+    backdrop-filter: blur(2px);
+  }
 
   .banner-content {
+    position: relative;
+    z-index: 4;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -172,6 +187,8 @@ header {
     padding-top: 15%;
 
     .banner-title {
+      position: relative;
+      z-index: 4;
       font-family: var.$police-principale;
       margin-top: 3.5%;
       margin-bottom: 3.5%;
